@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="logo-wrapper">
+        <div class="logo"> <img class="mercury" src="img/w-mercury-development@2x.png" alt="Mercury"> </div>
+    </div>
+    <div class="forma-wrapper">
+        <form class="forma">
+            <p class="forma__tittle">Login In</p>
+            <div class="forma__email">
+                <input id="name" class="em" type="email" placeholder="E-Mail">
+            </div>
+            <div class="forma__password">
+                <input id="password" class="pas" type="password" placeholder="Password">
+            </div>
+            <div class="forma__email-error  _display-none">
+               <div class="email-error__text">E-Mail or password is incorrect</div>
+            </div>
+                <input class="forma__button" value="Login" type="submit" onclick=nameAndPass()>
+        </form>
+    </div>
+    <script>
+
+        var url = 'https://us-central1-mercdev-academy.cloudfunctions.net/login';
+
+        function nameAndPass() {
+            var username = document.getElementById('name').value;
+            var password = document.getElementById('password').value;
+            var data = {email: username, password : password};
+
+            fetch(url, {
+                method: 'POST',
+                headers:{
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            }).then(res => res.json())
+                .then(response => {
+                    let  photo = response.photoUrl;
+                    let  name = response.name;
+                })
+                .catch(error => {console.error('Ошибка:', error)});
+            if(name !== " "){
+                addClass();
+            } else {
+                removeClass();
+            }
+        }
+
+    function addClass() {
+       document.getElementsByClassName("forma__email-error").className += " _display-none";
+   }
+
+    function removeClass() {
+     document.getElementsByClassName("forma__email-error").className =
+         document.getElementsByClassName("forma__email-error").className.replace
+         ( /(?:^|\s)_display-none(?!\S)/g , '' )
+   }
+    </script>
+</body>
+</html>
+

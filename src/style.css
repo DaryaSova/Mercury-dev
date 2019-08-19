@@ -1,0 +1,410 @@
+
+body {
+    margin: 0;
+    background: url(img/background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    /*width: 100%;*/
+}
+
+*:before
+*:after {
+    box-sizing: border-box;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+p {
+    padding: 0;
+}
+
+.logo-wrapper {
+    /*height: 60px;*/
+    width: 100%;
+    margin-top: 141px;
+    margin-bottom: 125px;
+
+}
+
+
+
+
+/*LOGO===============================================*/
+
+
+@media screen and (max-width: 400px) {
+    .logo-wrapper {
+        margin-bottom: 43px;
+        margin-top: 37px;
+    }
+}
+
+
+.logo {
+    margin: 0 auto;
+    width: 315px;
+    height: 69px;
+}
+
+
+
+@media screen and (max-width: 400px) {
+    .logo {
+        width: 182px;
+        height: 40px;
+    }
+}
+
+
+
+.mercury {
+    object-fit: contain;
+    width: 315px;
+    height: 69px;
+}
+
+
+@media screen and (max-width: 400px) {
+    .mercury {
+        width: 182px;
+        height: 40px;
+    }
+}
+
+
+
+
+
+
+
+/*forma===========*/
+
+.forma-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 430px;
+}
+
+
+
+@media screen and (max-width: 400px) {
+    .forma-wrapper {
+        height: 344px;
+    }
+}
+
+
+.forma {
+    width: 600px;
+    /*height: 409px;*/
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #ffffff;
+    /*padding: 16px;*/
+}
+
+
+
+
+@media screen and  (max-width: 400px) {
+    .forma {
+        width: 288px;
+    }
+}
+
+
+
+.forma__tittle {
+  opacity: 0.8;
+  font-family: "Gotham", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.2px;
+
+
+    margin: 48px 0;
+}
+
+
+@media screen and (max-width: 400px) {
+    .forma__tittle {
+        margin: 32px 0;
+    }
+}
+
+
+.forma__email {
+    margin-bottom: 32px;
+}
+.forma__password{
+    margin-bottom: 32px;
+}
+
+@media screen and (max-width: 400px) {
+    .forma__password{
+        margin-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .forma__email {
+        margin-bottom: 24px;
+}
+}
+
+
+
+.em,
+.pas{
+    width: 472px;
+    height: 48px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+
+    font-weight: 700;
+    outline: none;
+    padding: 0 16px;
+}
+
+
+
+@media screen and (max-width: 400px) {
+    .em, .pas {
+        width: 192px;
+
+    }
+
+}
+
+
+
+
+.forma__button {
+    width: 146px;
+    height: 48px;
+    margin: 16px 0 60px 0;
+    box-shadow: 0 4px 16px 0 rgba(237, 65, 89, 0.4);
+    background: #ed4159;
+    border-radius: 100px;
+    border: none;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+@media screen and (max-width: 400px) {
+    .forma__button {
+        margin: 16px 0 48px 0;
+    }
+}
+
+.button-logout{
+    width: 154px;
+    margin-top: 56px;
+    margin-bottom: 60px;
+}
+
+
+
+
+/*Для страницы с аватаром пользователя*/
+.forma__name{
+    opacity: 0.8;
+    font-family: "Gotham", sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.2px;
+
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 400px) {
+    .forma__name {
+        opacity: 0.8;
+        font-size: 18px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.15px;
+        text-align: center;
+        color: #262626;
+
+        margin-top: 24px;
+    }
+}
+
+
+
+.forma__image{
+    background-image: url("img/avatar.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: 48px;
+
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+
+@media screen and (max-width: 400px) {
+    .forma__image {
+        width: 86px;
+        height: 86px;
+
+        margin-top: 32px;
+    }
+}
+
+.button-logout{
+    width: 154px;
+    margin-top: 56px;
+    margin-bottom: 60px;
+}
+
+@media screen and (max-width: 400px) {
+    .button-logout {
+        margin: 40px 0 48px 0;
+    }
+}
+
+
+
+
+/*Для страницы с ошибкой========*/
+
+.forma__email-error{
+    width: 503px;
+    height: 40px;
+    background: rgba(237, 65, 89, 0.25);
+    color: #ed4159;
+    font-size: 14px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+@media screen and (max-width: 400px) {
+    .forma__email-error{
+        width: 223px;
+        height: 40px;
+        margin-bottom: 24px;
+    }
+}
+
+._display-none{
+    display: none;
+}
+.email-error__text{
+    padding: 0 16px;
+}
+
+
+
+
+
+.forma__button:hover{
+    box-shadow: 0 6px 20px 0 rgba(237, 65, 89, 0.4);
+    background: #ffffff;
+    color: #ed4159;
+    outline: none;
+
+
+}
+
+
+.forma__button:active {
+    background-color: #ffffff;
+    color: #ed4159;
+    box-shadow: 0 2px 10px 0 rgba(237, 65, 89, 0.5);
+    outline: none;
+
+}
+
+
+
+
+
+.img {
+    background-size: 100% auto;
+}
+
+
+
+
+
+
+/*
+input[type="email"]::-moz-placeholder {
+    opacity: 0.5;
+   }
+*/
+
+input[type="email"]::-webkit-input-placeholder{
+    opacity: 0.5;
+}
+
+
+
+
+/*
+input[type="password"]::-moz-placeholder {
+    opacity: 0.5;
+   }
+*/
+
+input[type="password"]::-webkit-input-placeholder{
+    opacity: 0.5; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
